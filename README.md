@@ -54,8 +54,8 @@ npm audit fix
 
 **Setup the Database**
 
-Open `.env` and make sure the `DATABASE_URL` setting is
-correct for your system.
+Open `.env` and make sure the `DB_DATABASE` name is
+correct for your setup.
 
 If there is no such file, copy the `.env.example` file and name it `.env`.
 
@@ -63,7 +63,7 @@ If there is no such file, copy the `.env.example` file and name it `.env`.
 copy .env.example .env
 ```
 
-Then, create the database (I used PhpStorm IDE to create the initial DB)
+Then, create the database (I used PhpStorm IDE to create the initial DB) by naming it the same as `DB_DATABASE`
 
 **Generate key**
 
