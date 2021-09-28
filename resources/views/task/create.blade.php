@@ -18,14 +18,12 @@
             </div>
             <div class="form-group">
                 <label for="task_start">Start time</label>
-                <input class="form-control" type="date" name="start_date"  value="{{old('start_date')}}">
-                <input class="form-control" type="time" name="start_time"  value="{{old('start_time')}}">
+                <input class="form-control" type="datetime-local" name="start_date"  value="{{old('start_date')}}">
                 <small>When the task was started</small>
             </div>
             <div class="form-group">
                 <label for="task_finish">Finish time</label>
-                <input class="form-control" type="date" name="finish_date"  value="{{old('finish_date')}}">
-                <input class="form-control" type="time" name="finish_time"  value="{{old('finish_time')}}">
+                <input class="form-control" type="datetime-local" name="finish_date"  value="{{old('finish_date')}}">
                 <small>When the task was finished</small>
             </div>
             <button type="submit" class="btn btn-primary mt-2">Create</button>

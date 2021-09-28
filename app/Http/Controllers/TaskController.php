@@ -50,9 +50,7 @@ class TaskController extends Controller
             'task_title' => ['required', 'max:64'],
             'task_comment' => ['required', 'max:512'],
             'start_date' => ['required'],
-            'start_time' => ['required'],
             'finish_date' => ['required'],
-            'finish_time' => ['required'],
             ],
             [
                 'task_title.max' => 'Title text too long. Try with less than 64 characters',
@@ -68,8 +66,8 @@ class TaskController extends Controller
         $task = new Task();
         $task->title = $request->task_title;
         $task->comment = $request->task_comment;
-        $task->start_time = ($request->start_date.' '.$request->start_time);
-        $task->finish_time = ($request->finish_date.' '.$request->finish_time);
+        $task->start_time = $request->start_date;
+        $task->finish_time = $request->finish_date;
         $task->user_id = $request->user()->id;
         $task->save();
         return redirect()->route('task.index')->with('success', 'Task added successfully.');
@@ -112,9 +110,7 @@ class TaskController extends Controller
                 'task_title' => ['required', 'max:64'],
                 'task_comment' => ['required', 'max:512'],
                 'start_date' => ['required'],
-                'start_time' => ['required'],
                 'finish_date' => ['required'],
-                'finish_time' => ['required'],
             ],
             [
                 'task_title.max' => 'Title text too long. Try with less than 64 characters',
@@ -129,8 +125,8 @@ class TaskController extends Controller
 
         $task->title = $request->task_title;
         $task->comment = $request->task_comment;
-        $task->start_time = $request->start_date.' '.$request->start_time;
-        $task->finish_time = $request->finish_time.' '.$request->finish_time;
+        $task->start_time = $request->start_date;
+        $task->finish_time = $request->finish_date;
         $task->user_id = $request->user()->id;
         $task->save();
         return redirect()->route('task.index')->with('success', 'Task updated successfully.');
