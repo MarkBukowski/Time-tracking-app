@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
-use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +16,14 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('auth.login');
+});
+
+Route::get('/home', function () {
+    return view('home');
 });
 
 Auth::routes();
-
-Route::get('/', [HomeController::class, 'index'])->name('login');
 
 Route::group(['prefix' => 'tasks'], function (){
     Route::get('', [TaskController::class, 'index'])->name('task.index');
