@@ -32,7 +32,7 @@ Navigate to the location you want to clone the repository via your terminal wind
 git clone https://github.com/MarkBukowski/Time-tracking-app
 ```
 
-Jump up to the cloned project folder and install the Laravel framevowrk alongside with necessary dependencies.
+Jump up to the cloned project folder and install the Laravel framework alongside with necessary dependencies.
 
 Make sure you have [Composer installed](https://getcomposer.org/download/)
 and then run:
@@ -52,11 +52,10 @@ If you receive any vulnerabilities when installing npm modules, after the comman
 npm audit fix
 ```
 
-
 **Setup the Database**
 
-Open `.env` and make sure the `DATABASE_URL` setting is
-correct for your system.
+Open `.env` and make sure the `DB_DATABASE` name is
+correct for your setup.
 
 If there is no such file, copy the `.env.example` file and name it `.env`.
 
@@ -64,11 +63,7 @@ If there is no such file, copy the `.env.example` file and name it `.env`.
 copy .env.example .env
 ```
 
-Then, create the database (I used phpmyadmin via xampp) and the schema!
-
-```
-php bin/console doctrine:schema:create
-```
+Then, create the database (I used PhpStorm IDE to create the initial DB) by naming it the same as `DB_DATABASE`
 
 **Generate key**
 
@@ -88,8 +83,7 @@ php artisan migrate
 
 **Start the web server**
 
-You can use Nginx or Apache, but the built-in web server works
-great:
+You can use Nginx or Apache, but the built-in web server works great:
 
 ```
 php -S localhost:8000 -t public
