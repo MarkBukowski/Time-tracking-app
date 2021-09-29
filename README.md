@@ -1,7 +1,7 @@
 User Task list
 =================================
 
-This is a simple to-do task list application, used to defend my practice skills on final BIT exam. Technologies used:
+This is a simple time tracking app, used to enter tasks with time taken to complete them. Built on Win10 machine, tested on Chrome. Technologies used:
 ```
 Laravel 8
 Bootstrap 4
@@ -63,7 +63,7 @@ If there is no such file, copy the `.env.example` file and name it `.env`.
 copy .env.example .env
 ```
 
-Then, create the database (I used PhpStorm IDE to create the initial DB) by naming it the same as `DB_DATABASE`
+Then, create the database on localhost server (I used PhpStorm IDE to create the initial DB in XAMPP) by naming it the same as `DB_DATABASE`
 
 **Generate key**
 
